@@ -1,1 +1,17 @@
 /* Denna fil skall innehålla din CSS kod */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
