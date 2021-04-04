@@ -1,17 +1,85 @@
-/* Denna fil skall innehålla din CSS kod */
-ul {
-    list-style-type: none;
+*{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-li {
-    float: left;
-    color: white;
-    display: block;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+.nav{
+    position: absolute;
+    width: 100%;
+    padding: 15px 0;    
+}
+
+.nav .meny li a{
+    color:black;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.nav .meny li{
+    display: inline-block;
+    list-style: none;
+}
+
+.maxwidth{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    background: url();
+}
+
+.nav .maxwidth{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.home{
+    display: flex;
+    background: url("bild1.jpeg");
+    height: 100vh;
+    min-height: 500px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.home .maxwidth{
+    margin: auto 0 auto 40px;
+}
+
+.home .homesection .text1{
+    font-size: 27px;
+}
+
+.home .homesection .text2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+
+}
+
+.home .homesection .text3{
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.home .homesection .text3 span{
+    color: green;
+    font-weight: 5;
+}
+
+.nav .meny li a:hover{
+    color: blue;
+}
