@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+.nav{
+    position: relative;
+    width: 100%;
+    padding: 30px 0;  
+}
+
+.nav.sticky{
+    padding: 15px;
+    transition: 0.3s all ease-in-out;
+    background: black; 
+    top: 0;
+    position: sticky;
+}
+
+.nav .meny li a{
+    color:white;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.nav .meny li a:hover{
+    color: royalblue;
+}
+
+.nav .meny li{
+    display: inline-block;
+    list-style: none;
+}
+
+.maxwidth{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.nav .maxwidth{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav .logo a span{
+    color: royalblue;
+    font-weight: 5;
+}
+
+.nav .logo a:hover{
+    color:crimson;
+}
+
+img{
+display: flex;
+    height: 50vh;
+
+    margin-top: auto;
+    position: relative;
+    margin-left: 20px;
+    border: black 5px solid;
+    float: right;
+    margin-left: 70px;
+}
+
+.profil{
+    display: flex;
+    top: 30%;
+    left: 0%;
+    float: left;
+}
+
+.text1{
+    letter-spacing: 2px;
+    text-align: start;
+    margin-left: 15px;
+    color: black;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.knapp{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;   
+}
+.socialmedia{
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.socialmedia .media li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 0;
+    line-height: 50vh;
+    height: 1vh;
+    position: relative;
+}
+
+.socialmedia .media li a{
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    margin-left: 25px;
+    font-size: 27px;
+    text-align: center;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.socialmedia .media .youtube:hover{
+    color: crimson;
+}
+
+.socialmedia .media .twitter:hover{
+    color: royalblue;
+}
+
+.socialmedia .media .instagram:hover{
+    color: pink;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+.texten{
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: white;
+    filter: drop-shadow(.05em .05em black);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+@media (max-width: 1200px){
+    .meny{
+        margin: 0px;
+     } 
+ }
+ 
+ @media (max-width: 1000px){
+     .socialmedia .media li a{
+         font-size: 27px;
+         font-weight: 500;
+     }
+ }
+ 
+ @media (max-width: 900px){
+     .maxwidth{
+         padding: 0 50px;
+     }
+ 
+     .nav .meny{
+         position: absolute;
+         background-color: black;
+         height: 100vh;
+         width: 100%;
+         left: -100%;
+         top: 0;
+         text-align: center;
+         padding-top: 80px;
+         transition: all 0.6s ease;
+         z-index: 100;
+ 
+     }
+     
+     .nav .meny li{
+         display: block;
+     }
+ 
+     .nav .meny li a{
+         margin: 20px 0;
+         display: inline-block;
+         font-size: 25px;
+     }
+ 
+     .knapp{
+     display: block; 
+     z-index: 999;
+     }
+ 
+     .nav .meny.active{
+         left: 0;
+     }
+ }
+ 
+ @media (max-width: 760px){
+     .socialmedia .media li a{
+         font-size: 20px;
+         font-weight: 500;
+     }
+ }
+ 
+ @media (max-width: 510px){
+     .socialmedia .media li a{
+         font-size: 15px;
+         font-weight: 500;
+     }
+ }

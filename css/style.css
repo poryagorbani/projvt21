@@ -10,16 +10,28 @@
 .nav{
     position: absolute;
     width: 100%;
-    padding: 15px 0;    
+    padding: 30px 0;  
+}
+
+.nav.sticky{
+    padding: 15px;
+    transition: 0.3s all ease-in-out;
+    background: rgb(37, 30, 30); 
+    top: 0;
+    position: sticky;
 }
 
 .nav .meny li a{
-    color:black;
+    color:white;
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
+}
+
+.nav .meny li a:hover{
+    color: royalblue;
 }
 
 .nav .meny li{
@@ -31,7 +43,6 @@
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
-    background: url();
 }
 
 .nav .maxwidth{
@@ -43,36 +54,52 @@
 .nav .logo a{
     font-size: 35px;
     font-weight: 600;
-    color: black;
+    color: white;
     font-family: 'Noto Sans TC', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav .logo a span{
+    color: royalblue;
+    font-weight: 5;
+}
+
+.nav .logo a:hover{
+    color:crimson;
 }
 
 .home{
     display: flex;
-    background: url("bild1.jpeg");
     height: 100vh;
     min-height: 500px;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
-.home .maxwidth{
-    margin: auto 0 auto 40px;
-}
-
 .home .homesection .text1{
     font-size: 27px;
+    color: white;
+    filter: drop-shadow(.05em .05em black);
 }
 
 .home .homesection .text2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
-
+    color: white;
+    filter: drop-shadow(.05em .05em black);
 }
 
 .home .homesection .text3{
     font-size: 27px;
     margin: 5px 0;
+    color: white;
+    filter: drop-shadow(.05em .05em black);
+}
+
+.home .homesection .text2 span{
+    color:crimson;
+    font-weight: 5;
+    
 }
 
 .home .homesection .text3 span{
@@ -80,6 +107,216 @@
     font-weight: 5;
 }
 
-.nav .meny li a:hover{
-    color: blue;
+.home .homesection .text4{
+    font-size: 27px;
+    margin: 5px 0;
+    color: white;
+    filter: drop-shadow(.05em .05em black);
 }
+
+.home .homesection .text4 span{
+    color: crimson;
+    font-weight: 5;
+}
+
+.knapp{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;   
+}
+.socialmedia{
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.socialmedia .media li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 0;
+}
+
+.socialmedia .media li a{
+    color: white;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    margin-left: 25px;
+    font-size: 27px;
+
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.socialmedia .media .youtube:hover{
+    color: crimson;
+}
+
+.socialmedia .media .twitter:hover{
+    color: royalblue;
+}
+
+.socialmedia .media .instagram:hover{
+    color: pink;
+}
+
+@media (max-width: 1200px){
+   .home .meny{
+       margin: 0px;
+    } 
+}
+
+@media (max-width: 1000px){
+    .home .homesection .text2{
+        font-size: 60px;
+    }
+    
+    .home .homesection .text3{
+        font-size: 27px;
+    }
+    
+    .home .homesection .text1{
+        font-size: 30px;
+    }
+    
+    .home .homesection .text4{
+        font-size: 20px;
+    }
+    
+    .socialmedia .media li a{
+        font-size: 27px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 900px){
+    .maxwidth{
+        padding: 0 50px;
+    }
+
+    .nav .meny{
+        position: absolute;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.6s ease;
+        z-index: 100;
+
+    }
+    
+    .nav .meny li{
+        display: block;
+    }
+
+    .nav .meny li a{
+        margin: 20px 0;
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .knapp{
+    display: block; 
+    z-index: 999;
+    }
+
+    .nav .meny.active{
+        left: 0;
+    }
+
+    .home .homesection .text2{
+        z-index: -1;
+        position: sticky;
+        font-size: 55px;
+    }
+    
+    .home .homesection .text3{
+        z-index: -1;
+        position: sticky;
+        font-size: 23px;
+    }
+    
+    .home .homesection .text1{
+        z-index: -1;
+        position: sticky;
+        font-size: 25px;
+    }
+    
+    .home .homesection .text4{
+        z-index: -1;
+        position: sticky; 
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 760px){
+    .home .homesection .text2{
+        font-size: 41px;
+    }
+    
+    .home .homesection .text3{
+        font-size: 27px;
+    }
+    
+    .home .homesection .text1{
+        font-size: 25px;
+    }
+    
+    .home .homesection .text4{
+        font-size: 20px;
+    }
+    .socialmedia .media li a{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+
+@media (max-width: 600px){
+    .home .homesection .text2{
+        font-size: 30px;
+    }
+    
+    .home .homesection .text3{
+        font-size: 20px;
+    }
+    
+    .home .homesection .text1{
+        font-size: 20px;
+    }
+    
+    .home .homesection .text4{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 510px){
+    .home .homesection .text2{
+        font-size: 20px;
+        margin-top: 13px;
+    }
+    
+    .home .homesection .text3{
+        font-size: 15px;
+        margin-top: 13px;
+    }
+    
+    .home .homesection .text1{
+        font-size: 18px;
+        margin-top: 13px;
+    }
+    
+    .home .homesection .text4{
+        font-size: 15px;
+        margin-top: 13px;
+    }
+    .socialmedia .media li a{
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
